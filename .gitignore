@@ -1,0 +1,8 @@
+/vendor/
+/.env
+/writable/cache/*
+/writable/logs/*
+/writable/session/*
+/writable/uploads/*
+.DS_Store
+.phpunit.cache

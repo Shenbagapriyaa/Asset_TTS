@@ -1,0 +1,1 @@
+<?= $this->extend('layout') ?><?= $this->section('content') ?><div class="panel"><h1>Company unavailable</h1><p>The company code is unknown or this tenant is inactive. Check the code or contact your administrator.</p><a class="btn" href="<?= site_url('/') ?>">Back to login</a></div><?= $this->endSection() ?>

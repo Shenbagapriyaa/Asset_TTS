@@ -1,0 +1,8 @@
+<?php
+// Install CodeIgniter 4 with Composer before running this front controller.
+// The standard CI4 public/index.php is provided by codeigniter4/framework's appstarter.
+require dirname(__DIR__) . '/vendor/autoload.php';
+$app = require dirname(__DIR__) . '/app/Config/Paths.php';
+$paths = new Config\Paths();
+require $paths->systemDirectory . '/Boot.php';
+exit(CodeIgniter\Boot::bootWeb($paths));

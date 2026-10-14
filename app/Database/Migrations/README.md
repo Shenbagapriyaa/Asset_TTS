@@ -1,0 +1,1 @@
+Central migration files are in app/Database/Migrations. Tenant schema provisioning is currently centralized in SuperAdminController::createTenantSchema; production hardening should move it to versioned tenant migrations and wire migrate-all to run each migration in sequence.

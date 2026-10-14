@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS tenants (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  company_name VARCHAR(150) NOT NULL,
+  company_code VARCHAR(24) NOT NULL UNIQUE,
+  db_name VARCHAR(64) NOT NULL UNIQUE,
+  db_host VARCHAR(190) NOT NULL DEFAULT '127.0.0.1',
+  status ENUM('active','inactive') NOT NULL DEFAULT 'active',
+  created_at DATETIME NOT NULL
+);
+CREATE TABLE IF NOT EXISTS super_admins (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(190) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at DATETIME NOT NULL
+);
